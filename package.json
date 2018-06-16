@@ -1,0 +1,22 @@
+{
+  "name": "discrod",
+  "version": "1.0.0",
+  "description": "Discord bot (using discord.js) written for my personal server",
+  "main": "index.js",
+  "scripts": {
+    "start": "node .",
+    "lint": "eslint ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "bufferutil": "^3.0.4",
+    "discord.js": "^11.3.2",
+    "ffmpeg-binaries": "^3.2.2-3",
+    "node-fetch": "^2.1.2",
+    "opusscript": "0.0.6",
+    "uws": "^9.147.0",
+    "ytdl-core": "^0.20.2"
+  }
+}
