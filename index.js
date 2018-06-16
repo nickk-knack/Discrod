@@ -1,12 +1,10 @@
 const { prefix, token } = require('./config.json');
-// Include saveInterval when reimplementing currency ^
 const fs = require('fs');
 const Discord = require('discord.js');
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
 const commandFiles = fs.readdirSync('./commands');
 const cooldowns = new Discord.Collection();
-// const userCurrency = new Discord.Collection();
 
 console.log('Starting bot...');
 
@@ -18,66 +16,11 @@ for (const file of commandFiles) {
 }
 console.log('\tCommands loaded.');
 
-// Holy hell, I went about implementing this currency bit in a terrible way.
-// Probably going to rip it out
-
-// Check if currency file exists, create it if not
-// console.log('\tLooking for currency file...');
-// try {
-// 	fs.accessSync('currency.json', fs.constants.F_OK);
-// 	console.log('\tFound currency file.');
-// }
-// catch (e) {
-// 	console.log('\tCurrency file not found, creating it now...');
-// 	try {
-// 		fs.writeFileSync('currency.json', '');
-// 		console.log('\tCreated currency file.');
-// 	}
-// 	catch (err) {
-// 		console.log('\tFailed to create currency file ', err);
-// 	}
-// }
-
-// Load currency
-// console.log('\tLoading currency file...');
-// const rawCurrency = fs.readFileSync('currency.json');
-// if (rawCurrency.toString('hex') == '') {
-// 	console.log('\tCurrency file empty.');
-// }
-// else {
-// 	const readCurrency = JSON.parse(rawCurrency);
-// 	for (const user of readCurrency.users) {
-// 		userCurrency.set(user.name, user.currency);
-// 	}
-// 	console.log('\tCurrency file loaded.');
-// }
-
-// Definitions for currency functions
-// function addCurrency(user, amount) {
-// 	userCurrency.set(user, amount);
-// }
-
-// function saveCurrency() {
-// 	// The way this is currently written doesn't properly work.
-// 	// Need to save the json file such that there is a user object with each user and their currency amount
-// 	// Or, find a way to read the json file so that each user is an object with a currency amount
-// 	const newRawCurrency = JSON.stringify(userCurrency);
-// 	try {
-// 		fs.writeFileSync('currency.json', newRawCurrency);
-// 		console.log('Saved currency file.');
-// 	}
-// 	catch (e) {
-// 		console.log('Failed to write currency file back ', e);
-// 	}
-// }
-
 // Events
 console.log('\tLoading events...');
 client.on('ready', () => {
 	console.log(`\tLogged in as ${client.user.tag}!`);
 	console.log('Finished loading!');
-	// Save currency every 1 minute
-	// setInterval(saveCurrency, saveInterval * 60 * 1000);
 });
 
 client.on('message', msg => {
@@ -90,12 +33,6 @@ client.on('message', msg => {
 				msg.react('268177866926194690');
 			}
 		}
-
-		// if (Math.floor(Math.random() * 2) == 1) {
-		// 	const randAmount = Math.floor(Math.random() * (100 - 50 + 1)) + 50;
-		// 	addCurrency(msg.author.tag, randAmount);
-		// 	saveCurrency();
-		// }
 
 		return;
 	}

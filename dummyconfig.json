@@ -1,6 +1,4 @@
 {
     "prefix": ".",
-    "token": "YOUR_API_TOKEN_HERE",
-    "currencyName": "currency",
-    "saveInteval": 1
+    "token": "YOUR_API_TOKEN_HERE"
 }
