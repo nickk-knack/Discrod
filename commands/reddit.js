@@ -47,7 +47,7 @@ module.exports = {
 
 		const body = fetch(`${url}${query}`)
 			.then(res => res.json())
-			.then(data => data.data.children.map(data => data.data))
+			.then(data => data.data.children.map(d => d.data))
 			.catch(err => console.log('shit:\n' + err));
 
 		// Push data to user
