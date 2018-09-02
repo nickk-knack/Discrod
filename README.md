@@ -11,6 +11,8 @@ Discrod uses dotenv to load environmnent variables from a .env file. This file w
     * Your Google API key (for the image.js plugin)
 4. GOOGLE_CSE_ID
     * Your Google CSE ID (for the image.js plugin)
+5. PORT
+    * The port you want the web frontend to listen on
 
 ## Writing command plugins
 Command plugins for Discrod are written as CommonJS modules, saved as a .js file and stored in the 'commands' folder. These modules consist of various properties as well as an 'execute' function.

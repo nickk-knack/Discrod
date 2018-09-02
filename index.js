@@ -1,5 +1,7 @@
 require('dotenv').config();
 const fs = require('fs');
+const express = require('express');
+const app = express();
 const Discord = require('discord.js');
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
@@ -116,3 +118,11 @@ client.on('disconnect', () => {
 console.log('\tEvents loaded.');
 console.log('\tLogging in...');
 client.login(token);
+
+app.get('/', (req, res) => {
+	res.end('hello world');
+});
+
+app.listen(process.env.PORT, () => {
+	console.log(`Listening on port ${process.env.PORT}`);
+});
