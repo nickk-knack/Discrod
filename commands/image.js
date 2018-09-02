@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const GoogleImages = require('google-images');
-const { GoogleAPIKey, GoogleCSEID } = require('../config.json');
+const GoogleAPIKey = process.env.GOOGLE_API_KEY;
+const GoogleCSEID = process.env.GOOGLE_CSE_ID;
 
 module.exports = {
 	name: 'image',

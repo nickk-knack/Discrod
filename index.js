@@ -1,10 +1,13 @@
-const { prefix, token } = require('./config.json');
+// const { prefix, token } = require('./config.json');
+require('dotenv').config();
 const fs = require('fs');
 const Discord = require('discord.js');
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
 const commandFiles = fs.readdirSync('./commands');
 const cooldowns = new Discord.Collection();
+const prefix = process.env.PREFIX;
+const token = process.env.TOKEN;
 
 console.log('Starting bot...');
 

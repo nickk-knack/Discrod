@@ -1,10 +1,21 @@
 # Discrod
 Discord bot written using discord.js for my personal Discord server.
 
-## Writing command plugins
-#### Command plugins for Discrod are written as CommonJS modules, saved as a .js file and stored in the 'commands' folder. These modules consist of various properties as well as an 'execute' function.
+## Environment Variables
+Discrod uses dotenv to load environmnent variables from a .env file. This file will need to include the following parameters:
+1. PREFIX
+    * The prefix for your Discord bot's commands
+2. TOKEN
+    * The API token for your Discord bot
+3. GOOGLE_API_KEY
+    * Your Google API key (for the image.js plugin)
+4. GOOGLE_CSE_ID
+    * Your Google CSE ID (for the image.js plugin)
 
-#### There are 7 properties to add to a command plugin.
+## Writing command plugins
+Command plugins for Discrod are written as CommonJS modules, saved as a .js file and stored in the 'commands' folder. These modules consist of various properties as well as an 'execute' function.
+
+There are 7 properties to add to a command plugin.
 1. name
     * Type: `String`
     * *Required*
