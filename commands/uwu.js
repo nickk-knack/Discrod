@@ -2,8 +2,8 @@ const Discord = require('discord.js');
 const snekfetch = require('snekfetch');
 
 module.exports = {
-	name: 'e621',
-	description: 'Search e621',
+	name: 'uwu',
+	description: 'Search e926',
 	args: true,
 	usage: '<tags>',
 	guildOnly: false,
