@@ -15,6 +15,11 @@ module.exports = {
 			}
 		}
 
+		if (dice <= 0) {
+			message.reply('you don\'t know how dice work.');
+			return;
+		}
+
 		const roll = Math.floor((Math.random() * dice) + 1);
 		let replyAppend = '';
 		if (roll == 1) {
