@@ -7,6 +7,9 @@
     "start": "node .",
     "lint": "eslint ."
   },
+  "repository": {
+    "url": "https://github.com/nickk-knack/Discrod"
+  },
   "keywords": [],
   "author": "",
   "license": "MIT",
@@ -19,7 +22,10 @@
     "google-images": "^2.1.0",
     "node-fetch": "^2.1.2",
     "opusscript": "0.0.6",
+    "pornsearch": "^2.4.3",
     "uws": "^9.147.0",
+    "yandex-translate": "^2.1.2",
+    "youtube-search": "^1.1.3",
     "ytdl-core": "^0.20.2"
   }
 }
