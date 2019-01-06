@@ -18,11 +18,7 @@ module.exports = {
 
 		const query = args.join(' ');
 		const embed = new Discord.RichEmbed()
-<<<<<<< HEAD
 			.setColor('#ff00ff')
-=======
-			.setColor('#ff000ff')
->>>>>>> 078f4c0696d5188012499b52a1e9426df013663e
 			.setTitle(query);
 		const search = new Pornsearch(query);
 
