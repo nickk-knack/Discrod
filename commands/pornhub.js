@@ -26,7 +26,7 @@ module.exports = {
 			search.gifs()
 				.then(gifs => {
 					const item = gifs[Math.floor(Math.random() * gifs.length)].url;
-					embed.setImage(item);
+					embed.setURL(item);
 					message.channel.send(embed);
 				})
 				.catch(error => {
