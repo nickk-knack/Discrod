@@ -26,8 +26,7 @@ module.exports = {
 			search.gifs()
 				.then(gifs => {
 					const item = gifs[Math.floor(Math.random() * gifs.length)].url;
-					embed.setURL(item)
-						.addField('URL', item);
+					embed.setImage(item);
 					message.channel.send(embed);
 				})
 				.catch(error => {
@@ -39,7 +38,7 @@ module.exports = {
 			search.videos()
 				.then(vids => {
 					const item = vids[Math.floor(Math.random() * vids.length)].url;
-					embed.setImage(item);
+					embed.addField('URL:', item);
 					message.channel.send(embed);
 				})
 				.catch(error => {
