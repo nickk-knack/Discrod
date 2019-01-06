@@ -1,3 +1,4 @@
+const Discord = require('discord.js');
 const Pornsearch = require('pornsearch');
 
 module.exports = {
@@ -16,12 +17,17 @@ module.exports = {
 		}
 
 		const query = args.join(' ');
+		const embed = new Discord.RichEmbed()
+			.setColor('#ff000ff')
+			.setTitle(query);
 		const search = new Pornsearch(query);
 
 		if (contentType == 'gif') {
 			search.gifs()
 				.then(gifs => {
-					message.channel.send(gifs[Math.floor(Math.random() * gifs.length)].url);
+					const item = gifs[Math.floor(Math.random() * gifs.length)].url;
+					embed.setImage(item);
+					message.channel.send(embed);
 				})
 				.catch(error => {
 					console.error(error);
@@ -31,7 +37,9 @@ module.exports = {
 		else if (contentType == 'vid') {
 			search.videos()
 				.then(vids => {
-					message.channel.send(vids[Math.floor(Math.random() * vids.length)].url);
+					const item = vids[Math.floor(Math.random() * vids.length)].url;
+					embed.setImage(item);
+					message.channel.send(embed);
 				})
 				.catch(error => {
 					console.error(error);
