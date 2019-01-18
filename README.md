@@ -1,8 +1,11 @@
 # Discrod
+
 Discord bot written using discord.js for my personal Discord server.
 
 ## Environment Variables
+
 Discrod uses dotenv to load environmnent variables from a .env file. This file will need to include the following parameters:
+
 1. PREFIX
     * The prefix for your Discord bot's commands
 2. TOKEN
@@ -13,11 +16,17 @@ Discrod uses dotenv to load environmnent variables from a .env file. This file w
     * Your Google CSE ID (for the image.js plugin)
 5. PORT
     * The port you want the web frontend to listen on
+6. YANDEX_TRANSLATE_API_KEY
+    * Your API key for Yandex Translate
+7. YOUTUBE_API_KEY
+    * You API key for accessing Google's YouTube API
 
 ## Writing command plugins
+
 Command plugins for Discrod are written as CommonJS modules, saved as a .js file and stored in the 'commands' folder. These modules consist of various properties as well as an 'execute' function.
 
 There are 7 properties to add to a command plugin.
+
 1. name
     * Type: `String`
     * *Required*
@@ -49,17 +58,22 @@ There are 7 properties to add to a command plugin.
     * *Optional (defaults to 1)*
     * **Cooldown time for the command, given in seconds.**
 
-#### Execute function
+### Execute function
+
 The `execute` function must take two arguments, one for the message object, and another for the arguments. i.e.
+
 ```javascript
 execute(message, args) {
     // Your execution code here
 }
 ```
+
 If you haven't used discord.js before, I recommend visiting their [API documentation for the message object](https://discord.js.org/#/docs/main/stable/class/Message) to get a peek at what is possible in the `execute` function.
 
 ### Example command plugin
+
 file: `commands/hello.js`
+
 ```javascript
 module.exports = {
     name: 'hello',
