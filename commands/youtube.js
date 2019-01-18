@@ -21,7 +21,7 @@ module.exports = {
 				return console.error(err);
 			}
 
-			console.log(res);
+			// console.log(res);
 			message.channel.send(res[Math.floor(Math.random() * res.length)].link);
 		});
 	},
