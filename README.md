@@ -1,5 +1,7 @@
 # Discrod
 
+I've stopped working on this version in favor of my rewritten version, [crosdid](https://github.com/nickk-knack/crosdid)
+
 Discord bot written using discord.js for my personal Discord server.
 
 ## Environment Variables
