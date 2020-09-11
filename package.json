@@ -22,7 +22,7 @@
     "express": "^4.17.1",
     "google-images": "^2.1.0",
     "libsodium-wrappers": "^0.7.3",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "node-opus": "^0.2.7",
     "opusscript": "0.0.6",
     "pornsearch": "^2.4.3",
